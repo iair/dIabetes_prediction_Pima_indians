@@ -30,9 +30,21 @@ Predicción de diabetes en indios Pima
 
 * Es decir, esperamos identificar correctamente  al 81% de la población que va a tener diabetes y al 78% de los que no, lo cual nos permitirá aplicar políticas preventivas sobre quienes tienen mayor probabilidad de padecer la enfermedad.
 
+
 * Hemos identificado que el nivel de glucosa en la sangre (medido con un test), la presión sistólica, la edad y el número de embarazos aparecen como las variables más relevantes a controlar en los pacientes para que podamos generar la predicción
 
+
 * El modelo es muy bueno identificando a los pacientes que no son diabéticos, pero tiene una performance menor para identificar a los que si lo son. Aún así, es el modelo con mejor balance en la precisión entre ambas clases, menor variabilidad en sus resultados y menor proproción de falsos negativos, que es el error que queremos minimizar.
+
+### Próximos pasos
+
+* Se pueden realizar ajustes moviendo la probabilidad de umbral, de tal forma que minimizemos los falsos negativos.
+
+* En la optimización de parámetros, se puede cambiar la métrica que sigue el algoritmo Gridsearch de Accuracy a Recall de la clase negativa
+
+* Aplicar optimización de parámetros al algoritmo KNN, el cual lógica distinta a los algoritmos escogidos previamente y podría ser que el identificar los subgrupos con caracteristicas similares previo a la clasificación capture patrones que el resto no
+
+* Generar un modelo que votacion de las predicciones realizadas con Random forest, Regresión Logística y KNN.
 
 ### Lenguajes utilizado
 
